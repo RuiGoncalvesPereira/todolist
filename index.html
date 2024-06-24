@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do Liste</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do-Liste</h1>
+        <form id="todoForm">
+            <label for="titel">Titel:</label>
+            <input type="text" id="titel" name="titel" maxlength="255" required>
+            
+            <label for="beschreibung">Beschreibung:</label>
+            <textarea id="beschreibung" name="beschreibung" maxlength="255" required></textarea>
+            
+            <label for="autor">Autor:</label>
+            <input type="text" id="autor" name="autor" maxlength="20" required>
+            
+            <label for="kategorie">Kategorie:</label>
+            <select id="kategorie" name="kategorie" required>
+                <option value="Sport">Sport</option>
+                <option value="Reisen">Reisen</option>
+                <option value="Restaurant">Restaurant</option>
+                <option value="Arbeit">Arbeit</option>
+                <option value="Sonstiges">Sonstiges</option>
+            </select>
+            
+            <label for="wichtig">Wichtig:</label>
+            <input type="checkbox" id="wichtig" name="wichtig">
+            
+            <label for="dringend">Dringend:</label>
+            <input type="checkbox" id="dringend" name="dringend">
+            
+            <label for="startDatum">Startdatum:</label>
+            <input type="date" id="startDatum" name="startDatum" required>
+            
+            <label for="endDatum">Enddatum:</label>
+            <input type="date" id="endDatum" name="endDatum" required>
+            
+            <label for="fortschritt">Prozentsatz:</label>
+            <input type="range" id="fortschritt" name="fortschritt" min="0" max="100" step="1">
+            <span id="fortschrittWert">0%</span>
+            
+            <button type="submit">Hinzufügen</button>
+            <p id="fehlermeldung" class="fehlermeldung"></p>
+        </form>
+
+        <h2>Aufgaben</h2>
+        <input type="text" id="suche" placeholder="Aufgaben suchen...">
+        <div id="aufgabenContainer"></div>
+    </div>
+
+    <div id="bearbeitenPopup" class="popup">
+        <form id="bearbeitenFormular">
+            <h3>Aufgabe bearbeiten</h3>
+            <label for="editTitel">Titel:</label>
+            <input type="text" id="editTitel" name="editTitel" maxlength="255" required>
+            
+            <label for="editBeschreibung">Beschreibung:</label>
+            <textarea id="editBeschreibung" name="editBeschreibung" maxlength="255" required></textarea>
+            
+            <label for="editAutor">Autor:</label>
+            <input type="text" id="editAutor" name="editAutor" maxlength="20" required>
+            
+            <label for="editKategorie">Kategorie:</label>
+            <select id="editKategorie" name="editKategorie" required>
+                <option value="Sport">Sport</option>
+                <option value="Reisen">Reisen</option>
+                <option value="Restaurant">Restaurant</option>
+                <option value="Arbeit">Arbeit</option>
+                <option value="Sonstiges">Sonstiges</option>
+            </select>
+            
+            <label for="editWichtig">Wichtig:</label>
+            <input type="checkbox" id="editWichtig" name="editWichtig">
+            
+            <label for="editDringend">Dringend:</label>
+            <input type="checkbox" id="editDringend" name="editDringend">
+            
+            <label for="editStartDatum">Startdatum:</label>
+            <input type="date" id="editStartDatum" name="editStartDatum" required>
+            
+            <label for="editEndDatum">Enddatum:</label>
+            <input type="date" id="editEndDatum" name="editEndDatum" required>
+            
+            <label for="editFortschritt">Prozentsatz:</label>
+            <input type="range" id="editFortschritt" name="editFortschritt" min="0" max="100" step="1">
+            <span id="editFortschrittWert">0%</span>
+            
+            <button type="submit">Speichern</button>
+            <button type="button" onclick="schliessenBearbeitenPopup()">Abbrechen</button>
+            <p id="bearbeitenFehlermeldung" class="fehlermeldung"></p>
+        </form>
+    </div>
+    
+    <script src="index.js"></script>
+
+</body>
+</html>
