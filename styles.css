@@ -1,14 +1,26 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
+    padding: 40px 0px 100px 70px;
+    background-color: #ac90d8c7;
 }
 
 .container {
     width: 50%;
     margin: 0;
     text-align: left;
+}
+
+.aufgabe-hinzufuegen {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#plusicon {
+    vertical-align: middle;
+    margin-left: 10px;
+    height: 30px; 
 }
 
 form {
@@ -29,16 +41,22 @@ form input, form textarea, form select, form button {
     width: 100%;
 }
 
+form select {
+    width: calc(100% - 16px); 
+}
+
 form button {
-    background-color: #28a745;
+    background-color: #0056b3;
     color: white;
     border: none;
     cursor: pointer;
     padding: 10px;
+    width: 130px;
+    align-self: flex-end;
 }
 
 form button:hover {
-    background-color: #218838;
+    background-color: #007bff;
 }
 
 .fehlermeldung {
@@ -54,13 +72,14 @@ form button:hover {
 .aufgabe {
     border: 1px solid #ccc;
     padding: 10px;
-    width: 45%;
+    width: calc(50% - 20px);
     box-sizing: border-box;
     position: relative;
     background: white;
     border-radius: 5px;
     cursor: pointer;
     transition: transform 0.3s;
+    word-wrap: break-word;
 }
 
 .aufgabe.erweitert {
@@ -75,9 +94,40 @@ form button:hover {
     margin: 5px 0;
 }
 
+.aufgabe p.bold {
+    font-weight: bold;
+}
+
+.aufgabe .highlight-sofort {
+    background-color: red;
+    color: white;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.aufgabe .highlight-einplanen {
+    background-color: yellow;
+    color: black;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.aufgabe .highlight-gibab {
+    background-color: lightgreen;
+    color: black;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.aufgabe .highlight-weg {
+    background-color: green;
+    color: white;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
 .aufgabe button {
-    margin: 5px;
-    background-color: #007bff;
+    margin: 5px 5px 0 0;
     color: white;
     border: none;
     cursor: pointer;
@@ -85,7 +135,27 @@ form button:hover {
     border-radius: 3px;
 }
 
-.aufgabe button:hover {
+button.abbrechen {
+    background-color: #dc3545;
+}
+
+button.abbrechen:hover {
+    background-color: #c82333;
+}
+
+button.abschliessen {
+    background-color: #28a745;
+}
+
+button.abschliessen:hover {
+    background-color: #218838;
+}
+
+button.bearbeiten {
+    background-color: #007bff;
+}
+
+button.bearbeiten:hover {
     background-color: #0056b3;
 }
 
@@ -120,4 +190,48 @@ button.loeschen:hover {
 #fortschrittWert, #editFortschrittWert {
     display: inline-block;
     margin-left: 10px;
+}
+
+#suche {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.erweitert-content p.beschreibung {
+    max-height: 50px;
+    overflow-y: auto;
+    word-wrap: break-word;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.checkbox-container label {
+    flex: 1;
+    text-align: left;
+}
+
+.checkbox-container input {
+    height: 20px;
+    margin-left: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+#bearbeitenFormular {
+    padding-right: 20px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
 }
