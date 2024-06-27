@@ -20,7 +20,7 @@ body {
 #plusicon {
     vertical-align: middle;
     margin-left: 10px;
-    height: 30px; 
+    height: 30px;
 }
 
 form {
@@ -34,7 +34,10 @@ form label {
     font-weight: bold;
 }
 
-form input, form textarea, form select, form button {
+form input,
+form textarea,
+form select,
+form button {
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -42,7 +45,7 @@ form input, form textarea, form select, form button {
 }
 
 form select {
-    width: calc(100% - 16px); 
+    width: calc(100% - 16px);
 }
 
 form button {
@@ -187,7 +190,8 @@ button.loeschen:hover {
     display: block;
 }
 
-#fortschrittWert, #editFortschrittWert {
+#fortschrittWert,
+#editFortschrittWert {
     display: inline-block;
     margin-left: 10px;
 }
@@ -232,6 +236,40 @@ button.loeschen:hover {
 
 hr {
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #ffffff;
     margin: 20px 0;
 }
+
+.slidecontainer {
+    width: 100%;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #ffffff;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: black;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: black;
+    cursor: pointer;
+  }
